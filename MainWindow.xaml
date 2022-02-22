@@ -126,10 +126,11 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Row="3"  
-            Margin="315,74,315,18"
-            Width="162"
-            Height="37"
-            FontSize="18" 
+            Margin="340,99,340,19"
+            Width="112"
+            Height="11"
+            FontSize="18"
+            Click="Registration_Click" 
             />
     </Grid>
 </Window>

@@ -46,5 +46,10 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             openWindow.Show();
             this.Close();
         }
+
+        private void Registration_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

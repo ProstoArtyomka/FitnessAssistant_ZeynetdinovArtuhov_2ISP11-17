@@ -13,8 +13,8 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="101*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -34,7 +34,7 @@
             FontSize="32" 
             Foreground="White"
             Grid.Row="0"
-            Grid.ColumnSpan="2"
+            Grid.ColumnSpan="2" Height="43" Margin="260,0" Width="272"
             />
         <TextBlock
             Text="Регистрация"
@@ -42,8 +42,7 @@
             VerticalAlignment="Top"
             FontSize="22" 
             Foreground="White"
-            Grid.Row="0"
-            Grid.ColumnSpan="2" Margin="318,43,325,0"
+            Grid.Row="0" Margin="347,43,17,0" Height="29" Width="125"
             />
         <TextBlock
             Text="Заполните поля, обязательные для входа"
@@ -52,9 +51,9 @@
             FontSize="20" 
             Grid.Row="0"
             Grid.ColumnSpan="2"
-            Margin="186,77,186,0" 
+            Margin="206,77,206,0" Width="380" 
             />
-       
+
     </Grid>
 </Window>
 
