@@ -34,10 +34,7 @@
             FontSize="32" 
             Foreground="White"
             Grid.Row="0"
-            Grid.ColumnSpan="2"
-            Height="43"
-            Margin="240,0"
-            Width="272"
+            Grid.ColumnSpan="2" Height="43" Margin="260,0" Width="272"
             />
         <TextBlock
             Text="Регистрация"
@@ -45,7 +42,7 @@
             VerticalAlignment="Top"
             FontSize="22" 
             Foreground="White"
-            Grid.Row="0" Margin="337,43,20,0" Height="29" Width="125"
+            Grid.Row="0" Margin="347,43,17,0" Height="29" Width="125"
             />
         <TextBlock
             Text="Заполните поля, обязательные для входа"
@@ -54,212 +51,9 @@
             FontSize="20" 
             Grid.Row="0"
             Grid.ColumnSpan="2"
-            Margin="195,77,195,0"
-            Width="380" 
+            Margin="206,77,206,0" Width="380" 
             />
-        <TextBlock
-            Text="Логин"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="1" 
-            Margin="100,12,300,61"
-            Height="31"
-            Width="69"
-            />
-        <TextBlock
-            Text="Пароль"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="1" 
-            Margin="94,75,300,18" Height="31" Width="75"
-            />
-        <TextBlock
-            Text="Фамилия"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="2" 
-            Margin="93,18,293,75" 
-            Height="31"
-            />
-        <TextBlock
-            Text="Имя"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="2" 
-            Margin="108,75,314,18" Height="31" Width="47"
-            />
-        <TextBlock
-            Text="Вес(кг.)"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="3" 
-            Margin="96,73,300,20" Height="31" Width="73"
-            />
-        <TextBlock
-            Text="Рост(см.)"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="3" 
-            Margin="94,19,294,74" 
-            Height="31"
-            Width="81"
-            />
-        <TextBlock
-            Text="Дата рождения"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="4" 
-            Height="30" 
-            Width="150"
-            Margin="28,22,291,71"
-            />
-        <TextBlock
-            Text="Пол"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            FontSize="20" 
-            Foreground="#FF051293"
-            Grid.Row="4" 
-            Grid.Column="1"
-            Margin="134,22,132,69" 
-            Height="32" RenderTransformOrigin="-0.946,0.438"
-            />
-        <TextBox
-            x:Name="Login"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="1" 
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,7,111,51" 
-            />
-        <TextBox
-            x:Name="Password"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="1"
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,66,111,11" 
-            />
-        <TextBox
-            x:Name="LastName"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="2" 
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,13,111,65"
-            />
-        <TextBox
-            x:Name="FirstName"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="2"
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,66,111,12" 
-            />
-        <TextBox
-            x:Name="HeightClient"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="3" 
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,14,111,64"
-            />
-        <TextBox
-            x:Name="WeightClient"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="3"
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,53,111,5"
-            />
-        <TextBox
-            x:Name="DateOfBirth"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="4" 
-            Grid.Column="0"
-            BorderBrush="#FF051293" 
-            Width="162"
-            Height="26"
-            Margin="196,14,111,63"
-            />
-        <ComboBox
-            x:Name="Gender"
-            Grid.Row="4"
-            Grid.ColumnSpan="2"
-            Margin="430,27,200,69"
-            />
-        <TextBlock
-            HorizontalAlignment="Center"
-            Foreground="#FF051293"
-            Grid.Row="1"
-            Margin="420,76,78,46"
-            Width="274"
-            Grid.RowSpan="2" Grid.ColumnSpan="2" 
-            ><Run Text="Пароль должен соответствовать следующим &#xA;условиям:"/>
-            <LineBreak/>
-            <Run Text=" • количество символов от 8 до 20;&#xA; • наличие цирф;&#xA; • наличие спецсимволов;&#xA; • наличие прописных и строчных букв.&#xA;"/>
-        </TextBlock>
-        <Button
-            x:Name="Registration"
-            Content="ЗАРЕГИСТРИРОВАТЬСЯ"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="4"
-            Grid.Column="0"
-            Margin="196,66,111,0"
-            Width="162"
-            Height="37"
-            Background="#FF051293" 
-            Foreground="White"
-            FontSize="14" 
-            />
-        <Button
-            x:Name="Back"
-            Content="ОТМЕНА"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="4"
-            Grid.ColumnSpan="2"
-            Width="162"
-            Height="37"
-            Foreground="#FF051293" 
-            Background="White"
-            FontSize="15"
-            Margin="420,66,190,0" 
-            />
+
     </Grid>
 </Window>
 
