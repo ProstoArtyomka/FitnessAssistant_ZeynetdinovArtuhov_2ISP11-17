@@ -85,7 +85,8 @@
             BorderBrush="#FF051293" 
             Margin="305,69,305,14"
             Width="162"
-            Height="27" TextChanged="Login_TextChanged"
+            Height="27"
+            TextChanged="Login_TextChanged"
             />
         <TextBox
             x:Name="Password"
@@ -115,22 +116,13 @@
             HorizontalAlignment="Center"
             Foreground="#FF051293"
             Grid.Row="3" 
-            Margin="330,94,330,10"
+            Margin="330,94,330,10"       
             >
-            <Hyperlink>
+            <Hyperlink
+                Click="Hyperlink_Click"
+                >
                 Зарегистрироваться
             </Hyperlink>
         </TextBlock>
-        <Button
-            x:Name="Registration"
-            VerticalAlignment="Center"
-            HorizontalAlignment="Center"
-            Grid.Row="3"  
-            Margin="340,99,340,19"
-            Width="112"
-            Height="11"
-            FontSize="18"
-            Click="Registration_Click" 
-            />
     </Grid>
 </Window>

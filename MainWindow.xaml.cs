@@ -37,19 +37,17 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
         private void Authorization_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Registration_SourceUpdated(object sender, DataTransferEventArgs e)
-        {
-            RegistrationWindow openWindow = new RegistrationWindow();
-            openWindow.Show();
+            UserInfoWindow openwindow = new UserInfoWindow();
+            openwindow.Show();
             this.Close();
         }
 
-        private void Registration_Click(object sender, RoutedEventArgs e)
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-
+            RegistrationWindow openwindow = new RegistrationWindow();
+            openwindow.Show();
+            this.Close();
         }
     }
 }
+

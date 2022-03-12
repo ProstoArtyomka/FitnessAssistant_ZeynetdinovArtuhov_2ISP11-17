@@ -15,23 +15,16 @@ using System.Windows.Shapes;
 namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 {
     /// <summary>
-    /// Логика взаимодействия для RegistrationWindow.xaml
+    /// Логика взаимодействия для UserInfoWindow.xaml
     /// </summary>
-    public partial class RegistrationWindow : Window
+    public partial class UserInfoWindow : Window
     {
-        public RegistrationWindow()
+        public UserInfoWindow()
         {
             InitializeComponent();
         }
 
-        private void Registration_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow openwindow = new MainWindow();
-            openwindow.Show();
-            this.Close();
-        }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow openwindow = new MainWindow();
             openwindow.Show();
