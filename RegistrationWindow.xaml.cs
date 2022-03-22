@@ -26,9 +26,78 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow openwindow = new MainWindow();
+            // Проверка на пустоту 
+
+            if (string.IsNullOrWhiteSpace(Login.Text))
+            {
+                MessageBox.Show("Поле Логин не может быть пустым");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(Password.Text))
+            {
+                MessageBox.Show("Поле Пароль не может быть пустым");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(LastName.Text))
+            {
+                MessageBox.Show("Поле Фамилия не может быть пустым");
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(FirstName.Text))
+            {
+                MessageBox.Show("Поле Имя не может быть пустым");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(HeightClient.Text))
+            {
+                MessageBox.Show("Поле Рост не может быть пустым");
+                return;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(WeightClient.Text))
+            {
+                MessageBox.Show("Поле Вес не может быть пустым");
+                return;
+            }
+
+
+            // Проверка на значение
+
+            int val;
+
+            if (!Int32.TryParse(DateOfBirth.Text, out val))
+            {
+                MessageBox.Show("Введены недопустимые значения в поле Возраст");
+                return;
+            }
+
+
+            if (!Int32.TryParse(HeightClient.Text, out val))
+            {
+                MessageBox.Show("Введены недопустимые значения в поле Рост \nВведите число!");
+                return;
+            }
+
+            if (!Int32.TryParse(WeightClient.Text, out val))
+            {
+                MessageBox.Show("Введены недопустимые значения в поле Вес \nВведите число!");
+                return;
+
+            }
+
+
+
+                MainWindow openwindow = new MainWindow();
             openwindow.Show();
             this.Close();
+
+
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -37,5 +106,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             openwindow.Show();
             this.Close();
         }
+
     }
+
 }

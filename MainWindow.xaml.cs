@@ -37,9 +37,27 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
         private void Authorization_Click(object sender, RoutedEventArgs e)
         {
-            UserInfoWindow openwindow = new UserInfoWindow();
-            openwindow.Show();
-            this.Close();
+                // Проверка на пустоту 
+
+
+                if (string.IsNullOrWhiteSpace(Login.Text))
+                {
+                    MessageBox.Show("Поле Логин не может быть пустым");
+                    return;
+                }
+
+
+
+
+                if (string.IsNullOrWhiteSpace(Password.Text))
+                {
+                    MessageBox.Show("Поле Пароль не может быть пустым");
+                    return;
+                }
+
+                        UserInfoWindow openwindow = new UserInfoWindow();
+                        openwindow.Show();
+                        this.Close();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
