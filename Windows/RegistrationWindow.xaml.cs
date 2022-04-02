@@ -98,6 +98,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             this.Close();
 
 
+
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
