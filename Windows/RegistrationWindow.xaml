@@ -226,7 +226,7 @@
             x:Name="cmbGender"
             Grid.Row="4"
             Grid.ColumnSpan="2"
-            Margin="430,27,200,69" SelectionChanged="Gender_SelectionChanged"
+            Margin="430,24,200,72" SelectionChanged="Gender_SelectionChanged" BorderBrush="White"
             />
         <TextBlock
             HorizontalAlignment="Center"

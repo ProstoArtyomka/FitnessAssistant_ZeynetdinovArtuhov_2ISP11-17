@@ -150,7 +150,7 @@
                 FontSize="16"
                 Foreground="#FF051293"
                 FontWeight="Bold"
-                Margin="50 22 0 0"
+                Margin="20 22 0 0"
                 />
             </WrapPanel>
 
@@ -192,7 +192,7 @@
                 FontSize="16"
                 Foreground="#FF051293"
                 FontWeight="Bold"
-                Margin="50 42 0 0"
+                Margin="20 42 0 0"
                 />
             </WrapPanel>
 

@@ -56,7 +56,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             FirstOrDefault();
             if (userAuth != null)
             {
-                UserInfoWindow openwindow = new UserInfoWindow();
+                UserInfoWindow openwindow = new UserInfoWindow(userAuth);
                 openwindow.Show();
                 this.Close();
             }
