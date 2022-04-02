@@ -139,7 +139,7 @@
             Height="32" RenderTransformOrigin="-0.946,0.438"
             />
         <TextBox
-            x:Name="Login"
+            x:Name="txtLogin"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Row="1" 
@@ -151,7 +151,7 @@
             Margin="196,7,111,51" 
             />
         <TextBox
-            x:Name="Password"
+            x:Name="txtPassword"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             FontSize="18"
@@ -163,7 +163,7 @@
             Margin="196,66,111,11" 
             />
         <TextBox
-            x:Name="LastName"
+            x:Name="txtLastName"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Row="2" 
@@ -175,7 +175,7 @@
             Margin="196,13,111,65"
             />
         <TextBox
-            x:Name="FirstName"
+            x:Name="txtFirstName"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Grid.Row="2"
@@ -187,7 +187,7 @@
             Margin="196,66,111,12" 
             />
         <TextBox
-            x:Name="Height"
+            x:Name="txtHeight"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             FontSize="18"
@@ -199,7 +199,7 @@
             Margin="196,14,111,64"
             />
         <TextBox
-            x:Name="Weight"
+            x:Name="txtWeight"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             FontSize="18"
@@ -211,7 +211,7 @@
             Margin="196,53,111,5"
             />
         <TextBox
-            x:Name="DateOfBirth"
+            x:Name="txtBirthday"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             FontSize="18"
@@ -223,7 +223,7 @@
             Margin="196,14,111,63"
             />
         <ComboBox
-            x:Name="Gender"
+            x:Name="cmbGender"
             Grid.Row="4"
             Grid.ColumnSpan="2"
             Margin="430,27,200,69" SelectionChanged="Gender_SelectionChanged"

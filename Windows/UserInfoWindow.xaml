@@ -50,7 +50,7 @@
             Margin="16,1,16,0"
             />
 
-        <TextBlock x:Name="WelcomeUser"
+        <TextBlock x:Name="txtWelcomeUser"
                    Grid.ColumnSpan="3"
                    Grid.Row="1"
                    Text="Добро пожаловать, Мария!"
@@ -86,7 +86,7 @@
                     FontSize="16"
                     Foreground="#FF051293"/>
 
-                <TextBlock x:Name="WeightClient"
+                <TextBlock x:Name="txtWeightClient"
                     Text="54"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -99,7 +99,7 @@
                     Margin="45 0 0 0"
                     Foreground="#FF051293"/>
 
-                <TextBlock x:Name="HeightClient"
+                <TextBlock x:Name="txtHeightClient"
                     Text="173"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -112,7 +112,7 @@
                     Foreground="#FF051293"
                     Margin="45 0 0 0"/>
 
-                <TextBlock x:Name="AgeClient"
+                <TextBlock x:Name="txtAgeClient"
                     Text="29"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -145,7 +145,7 @@
                 TextWrapping="Wrap"
                 />
 
-                <TextBlock x:Name="BMIClient"
+                <TextBlock x:Name="txtBMIClient"
                 Text="18.04 кг/м2 Недостаточная (дефицит) масса тела"
                 FontSize="16"
                 Foreground="#FF051293"
@@ -187,7 +187,7 @@
                 TextWrapping="Wrap"
                 />
 
-                <TextBlock x:Name="BMRClient"
+                <TextBlock x:Name="txtBMRClient"
                 Text="1315 ккал/день"
                 FontSize="16"
                 Foreground="#FF051293"

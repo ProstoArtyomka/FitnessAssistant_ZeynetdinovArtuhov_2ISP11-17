@@ -17,10 +17,10 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.DataBase
         public int ID { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
-        public System.DateTime DateBirst { get; set; }
+        public System.DateTime Birthday { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
-        public Nullable<byte> Age { get; set; }
+        public Nullable<int> Age { get; set; }
         public int IDGender { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }

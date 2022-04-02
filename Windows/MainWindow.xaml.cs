@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,22 +38,32 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
         private void Authorization_Click(object sender, RoutedEventArgs e)
         {
-                // Проверка на пустоту 
-                if (string.IsNullOrWhiteSpace(Login.Text))
-                {
-                    MessageBox.Show("Поле Логин не может быть пустым");
-                    return;
-                }
+             // Проверка на пустоту 
+            if (string.IsNullOrWhiteSpace(Login.Text))
+            {
+                 MessageBox.Show("Поле Логин не может быть пустым");
+                 return;
+            }
 
-                if (string.IsNullOrWhiteSpace(Password.Text))
-                {
-                    MessageBox.Show("Поле Пароль не может быть пустым");
-                    return;
-                }
+            if (string.IsNullOrWhiteSpace(Password.Text))
+            {
+                 MessageBox.Show("Поле Пароль не может быть пустым");
+                 return;
+            }
 
+            var userAuth = AppData.Context.User.ToList().
+            Where(i => i.Login == Login.Text && i.Password == Password.Text).
+            FirstOrDefault();
+            if (userAuth != null)
+            {
                 UserInfoWindow openwindow = new UserInfoWindow();
                 openwindow.Show();
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Пользователь с такими данными не найден!");
+            }
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
