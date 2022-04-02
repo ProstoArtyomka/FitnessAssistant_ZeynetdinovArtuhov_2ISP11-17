@@ -98,7 +98,9 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             newUser.IDGender = cmbGender.SelectedIndex + 1;
             newUser.Login = txtLogin.Text;
             newUser.Password = txtPassword.Text;
-            //newUser.Age = DateTime.Now - Convert.ToDateTime(txtBirthday.Text);
+            //Доделать
+            //var time = DateTime.Now.ToShortDateString();
+            //newUser.Age = Convert.ToInt32(time) - Convert.ToInt32(newUser.Birthday);
 
             AppData.Context.User.Add(newUser);
             AppData.Context.SaveChanges();

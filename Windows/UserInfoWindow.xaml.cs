@@ -26,7 +26,6 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
         public UserInfoWindow()
         {
             InitializeComponent();
-
         }
 
         public UserInfoWindow(DataBase.User user)

@@ -26,16 +26,6 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             InitializeComponent();
         }
 
-        private void Login_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Password_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void Authorization_Click(object sender, RoutedEventArgs e)
         {
              // Проверка на пустоту 

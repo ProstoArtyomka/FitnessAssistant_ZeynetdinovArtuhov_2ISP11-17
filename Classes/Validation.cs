@@ -37,7 +37,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
 
         {
 
-            if (Login.Length < 8 || Login.Length > 20)
+            if (Login.Length < 1 || Login.Length > 50)
                 return false;
 
 
