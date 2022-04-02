@@ -86,7 +86,7 @@
                     FontSize="16"
                     Foreground="#FF051293"/>
 
-                <TextBlock x:Name="Weight"
+                <TextBlock x:Name="WeightClient"
                     Text="54"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -99,7 +99,7 @@
                     Margin="45 0 0 0"
                     Foreground="#FF051293"/>
 
-                <TextBlock x:Name="Height"
+                <TextBlock x:Name="HeightClient"
                     Text="173"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -112,7 +112,7 @@
                     Foreground="#FF051293"
                     Margin="45 0 0 0"/>
 
-                <TextBlock x:Name="Age"
+                <TextBlock x:Name="AgeClient"
                     Text="29"
                     FontSize="16"
                     Foreground="#FF051293" 
@@ -145,7 +145,7 @@
                 TextWrapping="Wrap"
                 />
 
-                <TextBlock x:Name="BMI"
+                <TextBlock x:Name="BMIClient"
                 Text="18.04 кг/м2 Недостаточная (дефицит) масса тела"
                 FontSize="16"
                 Foreground="#FF051293"
@@ -187,7 +187,7 @@
                 TextWrapping="Wrap"
                 />
 
-                <TextBlock x:Name="BMR"
+                <TextBlock x:Name="BMRClient"
                 Text="1315 ккал/день"
                 FontSize="16"
                 Foreground="#FF051293"

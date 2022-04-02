@@ -84,6 +84,7 @@
             Grid.Row="1"  
             BorderBrush="#FF051293" 
             Margin="305,69,305,14"
+            FontSize="18"
             Width="162"
             Height="27"
             TextChanged="Login_TextChanged"
@@ -96,7 +97,9 @@
             BorderBrush="#FF051293" 
             Margin="305,20,305,63"
             Width="162"
-            Height="27" TextChanged="Password_TextChanged"          
+            Height="27" 
+            FontSize="18"
+            TextChanged="Password_TextChanged"          
             />
         <Button
             x:Name="Authorization"

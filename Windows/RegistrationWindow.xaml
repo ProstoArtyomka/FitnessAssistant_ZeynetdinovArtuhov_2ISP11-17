@@ -106,7 +106,7 @@
             Margin="96,73,300,20" Height="31" Width="73"
             />
         <TextBlock
-            Text="Рост(см.)"
+            Text="Рост(cм.)"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             FontSize="20" 
@@ -145,6 +145,7 @@
             Grid.Row="1" 
             Grid.Column="0"
             BorderBrush="#FF051293" 
+            FontSize="18"
             Width="162"
             Height="26"
             Margin="196,7,111,51" 
@@ -153,6 +154,7 @@
             x:Name="Password"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
+            FontSize="18"
             Grid.Row="1"
             Grid.Column="0"
             BorderBrush="#FF051293" 
@@ -167,6 +169,7 @@
             Grid.Row="2" 
             Grid.Column="0"
             BorderBrush="#FF051293" 
+            FontSize="18"
             Width="162"
             Height="26"
             Margin="196,13,111,65"
@@ -178,14 +181,16 @@
             Grid.Row="2"
             Grid.Column="0"
             BorderBrush="#FF051293" 
+            FontSize="18"
             Width="162"
             Height="26"
             Margin="196,66,111,12" 
             />
         <TextBox
-            x:Name="HeightClient"
+            x:Name="Height"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
+            FontSize="18"
             Grid.Row="3" 
             Grid.Column="0"
             BorderBrush="#FF051293" 
@@ -194,9 +199,10 @@
             Margin="196,14,111,64"
             />
         <TextBox
-            x:Name="WeightClient"
+            x:Name="Weight"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
+            FontSize="18"
             Grid.Row="3"
             Grid.Column="0"
             BorderBrush="#FF051293" 
@@ -208,6 +214,7 @@
             x:Name="DateOfBirth"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
+            FontSize="18"
             Grid.Row="4" 
             Grid.Column="0"
             BorderBrush="#FF051293" 
@@ -219,7 +226,7 @@
             x:Name="Gender"
             Grid.Row="4"
             Grid.ColumnSpan="2"
-            Margin="430,27,200,69"
+            Margin="430,27,200,69" SelectionChanged="Gender_SelectionChanged"
             />
         <TextBlock
             HorizontalAlignment="Center"

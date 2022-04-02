@@ -8,6 +8,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
 {
     public class Validation
     {
+        //Пароль
         public static bool ValidationPassword(String Password)
       
         {
@@ -31,7 +32,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
           }
 
 
-
+        //Логин
         public static bool ValidationLogin(String Login)
 
         {
@@ -56,6 +57,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
         }
 
 
+        //Фамилия Имя и Отчество
         public static bool ValidationFullName(String FullName)
 
         {
@@ -97,6 +99,27 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
             return true;
         }
 
+        //BMI=вес/рост^2
+        public static bool ValidationBMI(String BMI)
+
+        {
+
+            if (BMI.Length < 1 || BMI.Length > 80)
+                return false;
+
+            if (BMI.Any(Char.IsUpper))
+                return false;
+            if (BMI.Any(Char.IsLower))
+                return false;
+            if (!BMI.Any(Char.IsDigit))
+                return false;
+            if (BMI.Any(Char.IsPunctuation))
+                return false;
+            if (BMI.Any(Char.IsWhiteSpace))
+                return false;
+
+            return true;
+        }
 
     }
     

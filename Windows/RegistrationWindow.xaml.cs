@@ -53,14 +53,14 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(HeightClient.Text))
+            if (string.IsNullOrWhiteSpace(Height.Text))
             {
                 MessageBox.Show("Поле Рост не может быть пустым");
                 return;
             }
 
 
-            if (string.IsNullOrWhiteSpace(WeightClient.Text))
+            if (string.IsNullOrWhiteSpace(Weight.Text))
             {
                 MessageBox.Show("Поле Вес не может быть пустым");
                 return;
@@ -78,13 +78,13 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             }
 
 
-            if (!Int32.TryParse(HeightClient.Text, out val))
+            if (!Int32.TryParse(Height.Text, out val))
             {
                 MessageBox.Show("Введены недопустимые значения в поле Рост \nВведите число!");
                 return;
             }
 
-            if (!Int32.TryParse(WeightClient.Text, out val))
+            if (!Int32.TryParse(Weight.Text, out val))
             {
                 MessageBox.Show("Введены недопустимые значения в поле Вес \nВведите число!");
                 return;
@@ -93,7 +93,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
 
 
-                MainWindow openwindow = new MainWindow();
+            MainWindow openwindow = new MainWindow();
             openwindow.Show();
             this.Close();
 
@@ -107,6 +107,11 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             this.Close();
         }
 
+        private void Gender_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+
+        }
     }
 
 }

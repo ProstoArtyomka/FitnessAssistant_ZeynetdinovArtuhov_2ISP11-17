@@ -38,16 +38,11 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
         private void Authorization_Click(object sender, RoutedEventArgs e)
         {
                 // Проверка на пустоту 
-
-
                 if (string.IsNullOrWhiteSpace(Login.Text))
                 {
                     MessageBox.Show("Поле Логин не может быть пустым");
                     return;
                 }
-
-
-
 
                 if (string.IsNullOrWhiteSpace(Password.Text))
                 {
@@ -55,9 +50,9 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                     return;
                 }
 
-                        UserInfoWindow openwindow = new UserInfoWindow();
-                        openwindow.Show();
-                        this.Close();
+                UserInfoWindow openwindow = new UserInfoWindow();
+                openwindow.Show();
+                this.Close();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
