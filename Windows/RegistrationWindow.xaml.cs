@@ -42,6 +42,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             cmbGender.DisplayMemberPath = "NameGender";
 
             tbTitle.Text = "Изменения данных пользователя";
+            tbTitle2.Text = " ";
             btnRegistration.Content = "Изменить";
 
             userAuth = user;
@@ -135,6 +136,14 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
                     AppData.Context.SaveChanges();
                     MessageBox.Show("Успех", "Данные пользователя изменены", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    userAuth = AppData.Context.User.ToList().
+                    Where(i => i.Login == txtLogin.Text && i.Password == txtPassword.Text).
+                    FirstOrDefault();
+
+                    UserInfoWindow openwindow = new UserInfoWindow(userAuth);
+                    openwindow.Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -163,6 +172,10 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                         AppData.Context.SaveChanges();
 
                         MessageBox.Show("Успех", "Пользователь успешно добавлен", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                        MainWindow openwindow = new MainWindow();
+                        openwindow.Show();
+                        this.Close();
 
                     }
                 }

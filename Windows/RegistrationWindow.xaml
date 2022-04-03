@@ -44,11 +44,17 @@
             Text="Регистрация"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
+            TextAlignment="Center"
             FontSize="22" 
             Foreground="White"
-            Grid.Row="0" Margin="337,43,20,0" Height="29" Width="125"
+            Grid.Row="0"
+            Margin="106,43,106,0"
+            Height="29" 
+            Width="380"
+            Grid.ColumnSpan="2"
             />
         <TextBlock
+            x:Name="tbTitle2"
             Text="Заполните поля, обязательные для ввода"
             HorizontalAlignment="Center"
             Foreground="White"
