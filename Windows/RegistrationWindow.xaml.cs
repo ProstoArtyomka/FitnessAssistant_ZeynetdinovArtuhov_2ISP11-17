@@ -19,7 +19,10 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
     /// Логика взаимодействия для RegistrationWindow.xaml
     /// </summary>
     public partial class RegistrationWindow : Window
-    { 
+    {
+        DataBase.User userAuth = new DataBase.User();
+        bool isEdit = true;
+
         public RegistrationWindow()
         {
             InitializeComponent();
@@ -27,12 +30,39 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             cmbGender.ItemsSource = AppData.Context.Gender.ToList();
             cmbGender.DisplayMemberPath = "NameGender";
             cmbGender.SelectedItem = 0;
+
+            isEdit = false;
         }
+
+        public RegistrationWindow(DataBase.User user)
+        {
+            InitializeComponent();
+
+            cmbGender.ItemsSource = AppData.Context.Gender.ToList();
+            cmbGender.DisplayMemberPath = "NameGender";
+
+            tbTitle.Text = "Изменения данных пользователя";
+            btnRegistration.Content = "Изменить";
+
+            userAuth = user;
+
+            txtLastName.Text = userAuth.LastName;
+            txtFirstName.Text = userAuth.FirstName;
+            txtBirthday.Text = Convert.ToString(userAuth.Birthday);
+            txtWeight.Text = Convert.ToString(userAuth.Weight);
+            txtHeight.Text = Convert.ToString(userAuth.Height);
+            cmbGender.SelectedIndex = userAuth.IDGender - 1;
+            txtLogin.Text = userAuth.Login;
+            txtPassword.Text = userAuth.Password;
+
+            isEdit = true;
+
+        }
+
 
         private void Registration_Click(object sender, RoutedEventArgs e)
         {
             // Проверка на пустоту 
-
             if (string.IsNullOrWhiteSpace(txtLogin.Text))
             {
                 MessageBox.Show("Поле Логин не может быть пустым");
@@ -89,25 +119,58 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
             }
 
-            DataBase.User newUser = new DataBase.User();
-            newUser.LastName = txtLastName.Text;
-            newUser.FirstName = txtFirstName.Text;
-            newUser.Birthday = Convert.ToDateTime(txtBirthday.Text);
-            newUser.Weight = Convert.ToDouble(txtWeight.Text);
-            newUser.Height = Convert.ToDouble(txtHeight.Text);
-            newUser.IDGender = cmbGender.SelectedIndex + 1;
-            newUser.Login = txtLogin.Text;
-            newUser.Password = txtPassword.Text;
-            //Доделать
-            //var time = DateTime.Now.ToShortDateString();
-            //newUser.Age = Convert.ToInt32(time) - Convert.ToInt32(newUser.Birthday);
+            if (isEdit)
+            {
+                try
+                {
+                    //Изменение данных Клиента
+                    userAuth.LastName = txtLastName.Text;
+                    userAuth.FirstName = txtFirstName.Text;
+                    userAuth.Login = txtLogin.Text;
+                    userAuth.Password = txtPassword.Text;
+                    userAuth.Weight = Convert.ToDouble(txtWeight.Text);
+                    userAuth.Height = Convert.ToDouble(txtHeight.Text);
+                    userAuth.IDGender = cmbGender.SelectedIndex + 1;
+                    userAuth.Birthday = Convert.ToDateTime(txtBirthday.Text);
 
-            AppData.Context.User.Add(newUser);
-            AppData.Context.SaveChanges();
+                    AppData.Context.SaveChanges();
+                    MessageBox.Show("Успех", "Данные пользователя изменены", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+            else
+            {
+                try
+                {
+                    var resultClick = MessageBox.Show("Вы уверены?", "Подтвердите добавление пользователя", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (resultClick == MessageBoxResult.Yes)
+                    {
+                        //Добавление нового клиента
+                        DataBase.User newUser = new DataBase.User();
+                        newUser.LastName = txtLastName.Text;
+                        newUser.FirstName = txtFirstName.Text;
+                        newUser.Birthday = Convert.ToDateTime(txtBirthday.Text);
+                        newUser.Weight = Convert.ToDouble(txtWeight.Text);
+                        newUser.Height = Convert.ToDouble(txtHeight.Text);
+                        newUser.IDGender = cmbGender.SelectedIndex + 1;
+                        newUser.Login = txtLogin.Text;
+                        newUser.Password = txtPassword.Text;
 
-            MessageBox.Show("Успех", "Пользователь успешно добавлен", MessageBoxButton.OK, MessageBoxImage.Information);
-            this.Close();
+                        AppData.Context.User.Add(newUser);
+                        AppData.Context.SaveChanges();
 
+                        MessageBox.Show("Успех", "Пользователь успешно добавлен", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }  
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

@@ -34,6 +34,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
             userAuth = user;
 
+            txtIDClient.Text = Convert.ToString(userAuth.ID);
             txtWelcomeUser.Text = "Добро пожаловать, " + userAuth.FirstName + "!";
             txtWeightClient.Text = Convert.ToString(userAuth.Weight);
             txtHeightClient.Text = Convert.ToString(userAuth.Height);
@@ -41,41 +42,41 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             double BMI = userAuth.Weight / ((userAuth.Height/100) * (userAuth.Height/100));
             if (BMI < 16)
             {
-                txtBMIClient.Text = BMI + " Значительный дефицит массы тела";
+                txtBMIClient.Text = BMI + " кг/м2 Значительный дефицит массы тела";
             }
             else if (16 <= BMI && BMI < 18.5)
             {
-                txtBMIClient.Text = BMI + " Недостаток массы тела";
+                txtBMIClient.Text = BMI + " кг/м2 Недостаток массы тела";
             }
             else if (18.5 <= BMI && BMI < 25)
             {
-                txtBMIClient.Text = BMI + " Нормальный вес тела";
+                txtBMIClient.Text = BMI + " кг/м2 Нормальный вес тела";
             }
             else if (25 <= BMI && BMI < 30)
             {
-                txtBMIClient.Text = BMI + " Излишек массы тела";
+                txtBMIClient.Text = BMI + " кг/м2 Излишек массы тела";
             }
             else if (30 <= BMI && BMI < 35)
             {
-                txtBMIClient.Text = BMI + " Начальная степень ожирения";
+                txtBMIClient.Text = BMI + " кг/м2 Начальная степень ожирения";
             }
             else if (35 <= BMI && BMI < 40)
             {
-                txtBMIClient.Text = BMI + " Средняя степень ожирения";
+                txtBMIClient.Text = BMI + " кг/м2 Средняя степень ожирения";
             }
             else if (BMI >= 40)
             {
-                txtBMIClient.Text = BMI + " Высокая степень ожирения";
+                txtBMIClient.Text = BMI + " кг/м2 Высокая степень ожирения";
             }
 
             if (userAuth.IDGender == 1)
             {
-                double BMRMan = Convert.ToDouble(66 + (13.7 + userAuth.Weight) + (5 + (userAuth.Height / 100)) - (6.8 + userAuth.Age));
+                double BMRMan = Convert.ToDouble(66 + (13.7 + userAuth.Weight) + (5 + (userAuth.Height / 100)) - (6.8 + Convert.ToDouble(userAuth.Age)));
                 txtBMRClient.Text = Convert.ToString(BMRMan) + " ккал / день";
             }
             else if(userAuth.IDGender == 2)
             {
-                double BMRWoman = Convert.ToDouble(655 + (9.8 + userAuth.Weight) + (1.8 + (userAuth.Height / 100)) - (4.7 + userAuth.Age));
+                double BMRWoman = Convert.ToDouble(655 + (9.8 + userAuth.Weight) + (1.8 + (userAuth.Height / 100)) - (4.7 + Convert.ToDouble(userAuth.Age)));
                 txtBMRClient.Text = Convert.ToString(BMRWoman) + " ккал / день";
             }
         }
@@ -86,6 +87,24 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             MainWindow openwindow = new MainWindow();
             openwindow.Show();
             this.Close();
+        }
+
+        private void Сhange_Click(object sender, RoutedEventArgs e)
+        {
+            var userAuth = AppData.Context.User.ToList().
+            Where(i => i.ID == Convert.ToInt32(txtIDClient.Text)).
+            FirstOrDefault();
+            if (userAuth != null)
+            {
+                RegistrationWindow openwindow = new RegistrationWindow(userAuth);
+                openwindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Пользователь с такими данными не найден!");
+            }
+
         }
     }
 }

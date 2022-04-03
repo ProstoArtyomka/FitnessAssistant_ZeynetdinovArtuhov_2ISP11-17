@@ -62,6 +62,20 @@
                    Grid.Column="1"
                    Margin="192,10"/>
 
+        <TextBlock x:Name="txtIDClient"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="1"
+                   Text=""
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Foreground="{x:Null}"
+                   FontWeight="Medium"
+                   Grid.Column="1"
+                   Margin="192,10"
+                   Visibility="Hidden"/>
+
+
         <Line Grid.ColumnSpan="3" 
               Grid.Row="1" 
               Grid.Column="1"
@@ -216,7 +230,7 @@
             Grid.ColumnSpan="2" 
             Grid.Column="1"
             Margin="111,14,138,0" 
-            Grid.Row="11"
+            Grid.Row="11" Click="Сhange_Click"
            />
 
         <Button
@@ -232,7 +246,8 @@
             Background="White"
             FontSize="15"
             Grid.Column="2"
-            Margin="106,14,156,0" Click="Exit_Click"
+            Margin="106,14,156,0"
+            Click="Exit_Click"
   
             />
     </Grid>

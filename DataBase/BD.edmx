@@ -32,7 +32,7 @@
           <Property Name="Birthday" Type="date" Nullable="false" />
           <Property Name="Weight" Type="float" Nullable="false" />
           <Property Name="Height" Type="float" Nullable="false" />
-          <Property Name="Age" Type="int" />
+          <Property Name="Age" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Computed" />
           <Property Name="IDGender" Type="int" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -172,7 +172,7 @@
           <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Weight" Type="Double" Nullable="false" />
           <Property Name="Height" Type="Double" Nullable="false" />
-          <Property Name="Age" Type="Int32" />
+          <Property Name="Age" Type="Decimal" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="IDGender" Type="Int32" Nullable="false" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />

@@ -40,6 +40,7 @@
             Width="272"
             />
         <TextBlock
+            x:Name="tbTitle"
             Text="Регистрация"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
@@ -240,7 +241,7 @@
             <Run Text=" • количество символов от 8 до 20;&#xA; • наличие цирф;&#xA; • наличие спецсимволов;&#xA; • наличие прописных и строчных букв.&#xA;"/>
         </TextBlock>
         <Button
-            x:Name="Registration"
+            x:Name="btnRegistration"
             Content="ЗАРЕГИСТРИРОВАТЬСЯ"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
@@ -251,7 +252,8 @@
             Height="37"
             Background="#FF051293" 
             Foreground="White"
-            FontSize="14" Click="Registration_Click" 
+            FontSize="14" 
+            Click="Registration_Click" 
             />
         <Button
             x:Name="Back"

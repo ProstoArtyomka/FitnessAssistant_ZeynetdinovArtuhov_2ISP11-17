@@ -68,7 +68,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\AppData.cs" />
-    <Compile Include="Classes\Calc.cs" />
     <Compile Include="Classes\Validation.cs" />
     <Compile Include="DataBase\BD.Context.cs">
       <AutoGen>True</AutoGen>
