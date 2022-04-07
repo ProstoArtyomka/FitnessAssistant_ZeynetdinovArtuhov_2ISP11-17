@@ -232,6 +232,7 @@
         <ComboBox
             x:Name="cmbGender"
             Grid.Row="4"
+            FontSize="14"
             Grid.ColumnSpan="2"
             Margin="430,24,200,72" SelectionChanged="Gender_SelectionChanged" BorderBrush="White"
             />

@@ -43,7 +43,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
             tbTitle.Text = "Изменения данных пользователя";
             tbTitle2.Text = " ";
-            btnRegistration.Content = "Изменить";
+            btnRegistration.Content = "ИЗМЕНИТЬ";
 
             userAuth = user;
 
@@ -104,7 +104,6 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
 
             // Проверка на значение
-
             int val;
 
             if (!Int32.TryParse(txtHeight.Text, out val))

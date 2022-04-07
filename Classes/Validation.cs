@@ -67,7 +67,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
             return true;
         }
 
-        //рост и вес, только цифры и значения от 0 до 300, int and double
+        //Рост и вес, только цифры и значения от 0 до 300, int and double
         public static bool ValidationWeightAndHeight(String WeightAndHeight)
         {
             if (WeightAndHeight.Length < 2 || WeightAndHeight.Length > 3 || Convert.ToDouble(WeightAndHeight) > 300 || Convert.ToDouble(WeightAndHeight) <= 0)
@@ -83,7 +83,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
             return true;
         }
 
-        //BMI=вес/рост^2
+        //BMI
         public static bool ValidationBMI(String BMI, String Weight, String Height)
         {
             if (BMI.Length < 1 || BMI.Length > 50)
@@ -99,7 +99,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
 
             if (BMI.Contains("-") || Weight.Contains("-") || Height.Contains("-"))
                 return false;
-            if (BMI.Contains("-") || Weight.Contains(" ") || Height.Contains(" "))
+            if (BMI.Contains(" ") || Weight.Contains(" ") || Height.Contains(" "))
                 return false;
 
             if (BMI.Any(Char.IsUpper))
@@ -132,6 +132,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
             return true;
         }
 
+        //BMR
         public static bool ValidationBMR(String BMR, String Weight, String Height,String Age,String Gender)
         {
             if (BMR.Length < 1 || BMR.Length > 50)
@@ -155,7 +156,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
 
             if (BMR.Contains("-") || Weight.Contains("-") || Height.Contains("-") || Age.Contains("-") || Gender.Contains("-"))
                 return false;
-            if (BMR.Contains("-") || Weight.Contains(" ") || Height.Contains(" ") || Age.Contains(" ") || Gender.Contains(" "))
+            if (BMR.Contains(" ") || Weight.Contains(" ") || Height.Contains(" ") || Age.Contains(" ") || Gender.Contains(" "))
                 return false;
 
             if (BMR.Any(Char.IsUpper))
@@ -205,5 +206,14 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17.Classes
 
             return true;
         }
-    }  
+
+        //Дата рождения < Сегодняшняя дата
+        public static bool ValidationBirthday(DateTime Birthday)
+        {
+            if (Birthday > DateTime.Now)
+                return false;
+
+            return true;
+        }
+    }
 }
