@@ -52,7 +52,7 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             }
             else
             {
-                MessageBox.Show("Пользователь с такими данными не найден!");
+                MessageBox.Show("Пользователь с такими данными не найден!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 
