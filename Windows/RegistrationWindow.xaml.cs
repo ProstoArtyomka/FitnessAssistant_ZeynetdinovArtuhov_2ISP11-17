@@ -272,15 +272,24 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow openwindow = new MainWindow();
-            openwindow.Show();
-            this.Close();
-        }
-
-        private void Gender_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            if (isEdit)
+            {
+                var userAuth = AppData.Context.User.ToList().
+                Where(i => i.Login == txtLogin.Text && i.Password == txtPassword.Text).
+                FirstOrDefault();
+                if (userAuth != null)
+                {
+                    UserInfoWindow openwindow = new UserInfoWindow(userAuth);
+                    openwindow.Show();
+                    this.Close();
+                }
+            }
+            else
+            {
+                MainWindow openwindow = new MainWindow();
+                openwindow.Show();
+                this.Close();
+            }
         }
     }
-
 }

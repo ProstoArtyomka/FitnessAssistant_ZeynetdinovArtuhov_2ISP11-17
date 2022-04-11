@@ -81,7 +81,6 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             }
         }
 
-
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             MainWindow openwindow = new MainWindow();

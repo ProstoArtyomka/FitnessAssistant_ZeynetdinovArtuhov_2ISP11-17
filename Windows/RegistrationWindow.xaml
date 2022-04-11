@@ -234,7 +234,8 @@
             Grid.Row="4"
             FontSize="14"
             Grid.ColumnSpan="2"
-            Margin="430,24,200,72" SelectionChanged="Gender_SelectionChanged" BorderBrush="White"
+            Margin="430,24,200,72" 
+            BorderBrush="White"
             />
         <TextBlock
             HorizontalAlignment="Center"
@@ -245,7 +246,7 @@
             Grid.RowSpan="2" Grid.ColumnSpan="2" 
             ><Run Text="Пароль должен соответствовать следующим &#xA;условиям:"/>
             <LineBreak/>
-            <Run Text=" • количество символов от 8 до 20;&#xA; • наличие цирф;&#xA; • наличие спецсимволов;&#xA; • наличие прописных и строчных букв.&#xA;"/>
+            <Run Text=" • количество символов от 8 до 20;&#xA; • наличие цифр;&#xA; • наличие спецсимволов;&#xA; • наличие прописных и строчных букв.&#xA;"/>
         </TextBlock>
         <Button
             x:Name="btnRegistration"
