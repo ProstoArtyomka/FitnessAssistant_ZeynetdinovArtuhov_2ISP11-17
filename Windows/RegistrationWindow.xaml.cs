@@ -82,7 +82,6 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 return;
             }
 
-
             if (string.IsNullOrWhiteSpace(txtFirstName.Text))
             {
                 MessageBox.Show("Поле Имя не может быть пустым");
@@ -95,15 +94,56 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 return;
             }
 
-
             if (string.IsNullOrWhiteSpace(txtWeight.Text))
             {
                 MessageBox.Show("Поле Вес не может быть пустым");
                 return;
             }
 
+            if (string.IsNullOrWhiteSpace(txtBirthday.Text))
+            {
+                MessageBox.Show("Поле Дата рождения не может быть пустым");
+                return;
+            }
 
-            // Проверка на значение
+            //Проверка на кол-во символов
+            if ((txtLogin.Text.Length > 50) || (txtLogin.Text.Length < 1))
+            {
+                MessageBox.Show("Поле Логин не может быть больше 50-ти символов или меньше 1-го символа");
+                return;
+            }
+
+            if ((txtPassword.Text.Length > 20) || (txtPassword.Text.Length < 8))
+            {
+                MessageBox.Show("Поле Пароль не может быть больше 20-ти символов или меньше 8-ми символов");
+                return;
+            }
+
+            if ((txtLastName.Text.Length > 50) || (txtLastName.Text.Length < 1))
+            {
+                MessageBox.Show("Поле Фамилия не может быть больше 50-ти символов или меньше 1-го символа");
+                return;
+            }
+
+            if ((txtFirstName.Text.Length > 50) || (txtFirstName.Text.Length < 1))
+            {
+                MessageBox.Show("Поле Имя не может быть больше 50-ти символов или меньше 1-го символа");
+                return;
+            }
+
+            if ((txtHeight.Text.Length > 3) || (txtHeight.Text.Length < 1))
+            {
+                MessageBox.Show("Поле Рост не может быть больше 3-х символов или меньше 1-го символа");
+                return;
+            }
+       
+            if ((txtWeight.Text.Length > 3) || (txtWeight.Text.Length < 1))
+            {
+                MessageBox.Show("Поле Вес не может быть больше 3-х символов или меньше 1-го символа");
+                return;
+            }
+
+            //Проверка на значение
             int val;
 
             if (!Int32.TryParse(txtHeight.Text, out val))
@@ -117,6 +157,51 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 MessageBox.Show("Введены недопустимые значения в поле Вес \nВведите число!");
                 return;
 
+            }
+
+            if ((Convert.ToInt32(txtHeight.Text) > 440) || (Convert.ToInt32(txtHeight.Text) < 1))
+            {
+                MessageBox.Show("Поле Рост не может быть больше 440 см или меньше 1 см");
+                return;
+            }
+
+            if ((Convert.ToInt32(txtWeight.Text) > 272) || (Convert.ToInt32(txtWeight.Text) < 1))
+            {
+                MessageBox.Show("Поле Вес не может быть больше 272 кг или меньше 1 кг");
+                return;
+            }
+
+            //Проверка правильности
+            string Password = txtPassword.Text;
+
+            if (!Password.Any(Char.IsUpper))
+            {
+                MessageBox.Show("Поле Пароль не содержит букву верхнего регистра");
+                return;
+            }
+
+            if (!Password.Any(Char.IsLower))
+            {
+                MessageBox.Show("Поле Пароль не содержит букву нижнего регистра");
+                return;
+            }
+
+            if (!Password.Any(Char.IsDigit))
+            {
+                MessageBox.Show("Поле Пароль не содержит десятичную цифру");
+                return;
+            }
+
+            if (!Password.Any(Char.IsPunctuation))
+            {
+                MessageBox.Show("Поле Пароль не содержит символ знака припинания");
+                return;
+            }
+
+            if (Convert.ToDateTime(txtBirthday.Text) > DateTime.Now)
+            {
+                MessageBox.Show("Поле Дата рождения не может быть больше текущей даты");
+                return;
             }
 
             if (isEdit)
