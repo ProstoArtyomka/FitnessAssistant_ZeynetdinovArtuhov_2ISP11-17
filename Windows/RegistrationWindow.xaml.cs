@@ -107,9 +107,9 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
             }
 
             //Проверка на кол-во символов
-            if ((txtLogin.Text.Length > 50) || (txtLogin.Text.Length < 1))
+            if ((txtLogin.Text.Length > 50) || (txtLogin.Text.Length < 5))
             {
-                MessageBox.Show("Поле Логин не может быть больше 50-ти символов или меньше 1-го символа");
+                MessageBox.Show("Поле Логин не может быть больше 50-ти символов или меньше 5-ти символа");
                 return;
             }
 
@@ -171,7 +171,34 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 return;
             }
 
-            //Проверка правильности
+            //Проверка правильности логина
+            string Login = txtLogin.Text;
+
+            if (!Login.Any(Char.IsUpper))
+            {
+                MessageBox.Show("Поле Логин не содержит букву верхнего регистра");
+                return;
+            }
+
+            if (!Login.Any(Char.IsLower))
+            {
+                MessageBox.Show("Поле Логин не содержит букву нижнего регистра");
+                return;
+            }
+
+            if (!Login.Any(Char.IsDigit))
+            {
+                MessageBox.Show("Поле Логин не содержит десятичную цифру");
+                return;
+            }
+
+            if (!Login.Any(Char.IsPunctuation))
+            {
+                MessageBox.Show("Поле Логин не содержит символ знака припинания");
+                return;
+            }
+
+            //Проверка правильности пароля
             string Password = txtPassword.Text;
 
             if (!Password.Any(Char.IsUpper))
@@ -198,6 +225,35 @@ namespace FitnessAssistant_ZeynetdinovArtuhov_2ISP11_17
                 return;
             }
 
+            //Проверка веса
+            string Weight = txtWeight.Text;
+
+            if (Weight.Any(Char.IsUpper) || (Weight.Any(Char.IsLower) || (Weight.Any(Char.IsPunctuation) || (Weight.Any(Char.IsWhiteSpace)))))
+            {
+                MessageBox.Show("Поле Вес может содержать только ПОЛОЖИТЕЛЬНЫЕ цифры");
+                return;
+            }
+            if (!Weight.Any(Char.IsDigit))
+            {
+                MessageBox.Show("Поле Вес не содержит десятичную цифру");
+                return;
+            }
+
+            //Проверка роста
+            string Height = txtHeight.Text;
+
+            if (Height.Any(Char.IsUpper) || (Height.Any(Char.IsLower) || (Height.Any(Char.IsPunctuation) || (Height.Any(Char.IsWhiteSpace)))))
+            {
+                MessageBox.Show("Поле Рост может содержать только ПОЛОЖИТЕЛЬНЫЕ цифры");
+                return;
+            }
+            if (!Height.Any(Char.IsDigit))
+            {
+                MessageBox.Show("Поле Рост не содержит десятичную цифру");
+                return;
+            }
+
+            //Проверка даты рождения
             if (Convert.ToDateTime(txtBirthday.Text) > DateTime.Now)
             {
                 MessageBox.Show("Поле Дата рождения не может быть больше текущей даты");
